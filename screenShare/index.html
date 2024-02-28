@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Screen Share</title>
+    <style>
+        body{
+            background-color: wheat;
+        }
+        .vid{
+            height: 500px;
+            width: 800px;
+            border: 2px solid white;
+            background-color: #010101;
+        }
+        #video{
+            height: 100%;
+            width: 100%;
+        }
+        .box{
+            display: flex;
+            justify-content: center;
+        }
+        #start{
+            margin-top: 3%;
+            background-color: #010101;
+            color: white;
+            padding: 4px 11px;
+            opacity: 0.7;
+            border-radius: 4px;
+        }
+        #start:hover{
+            opacity: 1;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div>
+            <div class="vid">
+                <video id="video" autoplay></video>
+            </div>
+            <button id="start">Start Share</button>
+        </div>
+    </div>
+    <script>
+        start=document.querySelector("#start")
+        video=document.querySelector("#video")
+        var displayMediaOptions = {
+            video: {
+                cursor: "always",
+                height: 1000,
+                width: 1200
+            },
+            audio: false
+        };
+        start.addEventListener("click", function (evt) {
+            startCapture();
+        }, false);
+        async function startCapture() {
+            try {
+                video.srcObject = await navigator.mediaDevices.getDisplayMedia(displayMediaOptions);
+                dumpOptionsInfo();
+            } catch (err) {
+                console.error("Error: " + err);
+            }
+        }
+    </script>
+</body>
+</html>
