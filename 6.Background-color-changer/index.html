@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>background-color-changer</title>
+
+    <style>
+        body{
+          background-color: rgb(42, 157, 157);
+        }
+        .container{
+            display: flex;
+            justify-content: center;
+            margin-top: 80px;   
+        }
+        .container div{
+            padding: 50px;
+            border-radius: 20px;
+            margin-left: 15px;
+            border: 2px solid rgba(0, 0, 0, 0);
+        }
+        .container div:hover{
+            border-radius: 25px;
+            cursor: pointer;
+            border-color: black;
+        }
+#grey {
+    background: rgb(128, 128, 128);
+  }
+  
+  #white {
+    background: white;
+  }
+  #blue {
+    background: blue;
+  }
+  #pink{
+    background: pink;
+  }
+  
+  #brown {
+    background: brown;
+  }
+  
+  #black {
+    background: black;
+  }
+  #lightblue {
+    background: lightblue;
+  }
+  #lightgreen {
+    background: lightgreen;
+  }
+  #lime{
+    background: lime;
+  }
+  #royalblue{
+    background: royalblue;
+  }
+  </style>
+</head>
+<body>
+    <div class="container">
+        <div class="button" id="grey"></div>
+        <div class="button" id="white"></div>
+        <div class="button" id="blue"></div>
+        <div class="button" id="pink"></div>
+        <div class="button" id="brown"></div>
+    </div>
+    <div class="container">
+        <div class="button" id="black"></div>
+        <div class="button" id="lightblue"></div>
+        <div class="button" id="lightgreen"></div>
+        <div class="button" id="lime"></div>
+        <div class="button" id="royalblue"></div>
+    </div>
+
+
+    <script>
+    const buttons = document.querySelectorAll('.button');
+    const body = document.querySelector('body');     
+    buttons.forEach(function (button) {
+        console.log(button);
+        button.addEventListener('click', function (e) {
+            console.log(e);
+            console.log(e.target);
+            if (e.target.id === 'grey') {
+                body.style.backgroundColor = e.target.id;
+            }
+            if (e.target.id === 'white') {
+                body.style.backgroundColor = e.target.id;
+            }
+            if (e.target.id === 'blue') {
+                body.style.backgroundColor = e.target.id;
+            }
+            if (e.target.id === 'pink') {
+                body.style.backgroundColor = e.target.id;
+            }
+            if (e.target.id === 'brown') {
+                body.style.backgroundColor = e.target.id;
+            }
+
+            if (e.target.id === 'black') {
+                body.style.backgroundColor = e.target.id;
+            }
+            if (e.target.id === 'lightblue') {
+                body.style.backgroundColor = e.target.id;
+            }
+            if (e.target.id === 'lightgreen') {
+                body.style.backgroundColor = e.target.id;
+            }
+            if (e.target.id === 'lime') {
+                body.style.backgroundColor = e.target.id;
+            }
+            if (e.target.id === 'royalblue') {
+                body.style.backgroundColor = e.target.id;
+            }
+
+            const liner =(props)=>{
+                return(
+                    liner
+                )
+            }
+        });
+    });
+
+    </script>
+</body>
+</html>
