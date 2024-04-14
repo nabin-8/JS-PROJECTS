@@ -1,0 +1,40 @@
+body {
+    margin: 0;
+    background: #f0f0f0;
+}
+#upperSection{
+    /* border: 1px solid green; */
+    margin: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 6%;
+}
+.up-buttons{
+    padding: 8px;
+    border-radius: 4px;
+    background-color: #010101;
+    color: white;
+    height: 40px;
+    width: 95px;
+}
+#reset,#colors:hover{
+    background-color: #333131;
+    cursor: pointer;
+}
+#length-content{
+    display: flex;
+    align-items: center;
+}
+#length{
+    width: 120px;
+}
+#canvasContainer {
+    /* border: 1px solid #000; */
+    height: 75%;
+    width: auto;
+}
+#drawingCanvas{
+    border: 5px solid green;
+    height: 100%;
+    width: 99%;
+}
